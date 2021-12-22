@@ -1,0 +1,26 @@
+// Stilos personalizados para o Contact Form
+
+.wpcf7 form.invalid .wpcf7-response-output,
+.wpcf7 form.unaccepted .wpcf7-response-output {
+    border-color: #ffb900;
+    background-color: #ffb900;
+    position: absolute;
+    bottom: -34px;
+    width: 100%;
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+    border-radius: 40px;
+    margin: 0 auto;
+}
+.wpcf7-not-valid-tip {
+    color: #fff;
+    font-size: 1em;
+    font-weight: normal;
+    display: block;
+    position: initial;
+    left: initial;
+    background-color: #b8623d;
+    padding: 2px 15px;
+    margin: 0 auto;
+    width: 70%;
+}

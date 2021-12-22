@@ -1,0 +1,235 @@
+.timeline{
+    padding: 10px 0 60px;
+    h1{
+        margin: 60px 0 30px;
+        font-size: 3rem;
+    }
+    p{
+        font-size: 1.4rem;
+        line-height: 2.4rem;
+    }   
+}
+
+
+.timeline-line{
+    width: 5px;
+    background-color: $yellow;
+    margin-top: 75px;
+    position: relative;
+    &::after{
+        content: '';
+        position: absolute;
+        bottom: -8px;
+        left: -8px;
+        display: block;
+        width: 55px;
+        height: 22px;
+        background-image: url('../images/arrow-line.svg');
+        background-repeat: no-repeat;
+    }             
+}
+
+.wrap-timeline{
+    display: flex;
+    flex-direction: column;
+    margin-top: 46px;
+ 
+    .timeline-item{
+        padding-left: 13px;
+        display: flex;
+        flex-direction: column;
+        text-align: left;      
+        h3{
+            text-align: right;
+            align-self: flex-start;
+            position: relative;
+            padding: 9px 60px;
+            background-color: $blue;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 36px;
+            line-height: 43px;
+            color: #FFFFFF;
+            width: max-content;
+            margin: 0;              
+            &::after{
+                content: '';
+                position: absolute;
+                top: 20px;
+                left: -25px;
+                display: block;
+                width: 55px;
+                height: 22px;
+                background-image: url('../images/arow-right.svg');
+                background-repeat: no-repeat;
+            }                             
+        }
+        .timeline-text{
+            background-color: $lightgray;
+            padding: 37px 55px;
+            margin-bottom: 40px;
+            p:last-child{
+                margin-bottom: 0;
+            }
+        }        
+    }            
+
+}
+
+/*
+=====================================================
+Small devices (landscape phones, 576px and up)
+Read more: https://getbootstrap.com/docs/4.6/layout/overview/#responsive-breakpoints
+=====================================================
+*/
+@include media-breakpoint-up(sm) {
+}
+// 576px
+
+
+/*
+=====================================================
+Medium devices (tablets, 768px and up)
+Read more: https://getbootstrap.com/docs/4.6/layout/overview/#responsive-breakpoints
+=====================================================
+*/
+@include media-breakpoint-up(md) {
+
+
+    .timeline-content{
+        position: relative;
+        .timeline-line{
+            width: 5px;
+            background-color: #FFCA05;
+            margin-top: 30px;
+            position: relative;
+            left: 50%;
+            top: 48px;
+            &::after{
+                content: '';
+                position: absolute;
+                bottom: -8px;
+                left: -8px;
+                display: block;
+                width: 55px;
+                height: 22px;
+                background-image: url('../images/arrow-line.svg');
+                background-repeat: no-repeat;
+            }             
+        }
+
+    }
+
+    .wrap-timeline{
+        display: flex;
+        flex-direction: column;
+        margin-top: 46px;
+
+        .timeline-item:first-child{
+            margin-top: 0;
+        }
+
+        .timeline-item:nth-child(2n){
+            align-self: flex-end;
+            padding-left: 13px;
+            width: calc(50% - 3px);
+            text-align: left;
+            margin-top: -150px;
+            h3{
+                text-align: right;
+                align-self: flex-start;
+                position: relative;
+                &::after{
+                    content: '';
+                    position: absolute;
+                    top: 20px;
+                    left: -25px;
+                    right: initial;
+                    display: block;
+                    width: 55px;
+                    height: 22px;
+                    background-image: url('../images/arow-right.svg');
+                    background-repeat: no-repeat;
+                }                             
+            }
+        }
+
+
+        .timeline-item:nth-child(2n+1){
+            align-self: flex-start;
+            padding-right: 13px;
+            width: calc(50% - 3px);
+            text-align: left;
+            margin-top: 0;
+            h3{
+                text-align: left;
+                align-self: flex-end;
+                position: relative;
+                &::after{
+                    content: '';
+                    position: absolute;
+                    top: 20px;
+                    right: -25px;
+                    left: initial;
+                    display: block;
+                    width: 55px;
+                    height: 22px;
+                    background-image: url('../images/arrow-left.svg');
+                    background-repeat: no-repeat;
+                }         
+            }
+        }            
+        
+
+            
+        
+
+        .timeline-item{
+            display: flex;
+            flex-direction: column;
+            h3{
+                padding: 9px 60px;
+                background-color: $blue;
+                font-style: normal;
+                font-weight: bold;
+                font-size: 36px;
+                line-height: 43px;
+                color: #FFFFFF;
+                width: max-content;
+                margin: 0;             
+            }
+            .timeline-text{
+                background-color: $lightgray;
+                padding: 37px 55px;
+                margin-bottom: 40px;
+                p:last-child{
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+
+}
+// 768px
+
+/*
+=====================================================
+Large devices (desktops, 992px and up)
+Read more: https://getbootstrap.com/docs/4.6/layout/overview/#responsive-breakpoints
+=====================================================
+*/
+@include media-breakpoint-up(lg) {
+
+}
+// 992px
+
+/*
+=====================================================
+Extra large devices (large desktops, 1200px and up)
+Read more: https://getbootstrap.com/docs/4.6/layout/overview/#responsive-breakpoints
+=====================================================
+*/
+@include media-breakpoint-up(xl) {
+
+}
+// 1200px
